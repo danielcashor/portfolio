@@ -1,0 +1,382 @@
+<div class="portfolio-container">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <div class="nav-brand">DC</div>
+      <div class="nav-links">
+        <button
+          *ngFor="let section of sections"
+          (click)="scrollToSection(section)"
+          [class.active]="activeSection === section"
+          class="nav-link">
+          {{ section | uppercase }}
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <!-- Animated background -->
+    <div class="hero-background">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text-container">
+        <div class="hero-title-wrapper">
+          <h1 class="hero-title">DANIEL CASADO</h1>
+          <div class="hero-underline"></div>
+        </div>
+
+        <p class="hero-subtitle">Desarrollador Web Full Stack</p>
+
+        <p class="hero-description">
+          Especializado en Angular, PHP y MySQL. Apasionado por crear soluciones web
+          eficientes y escalables.
+        </p>
+
+        <div class="hero-buttons">
+          <a
+            href="https://linkedin.com/in/danielcasadohorstmann"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+          <button (click)="scrollToSection('contact')" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            Contacto
+          </button>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-content">
+      <h2 class="section-title">Sobre Mí</h2>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-paragraph">
+            Desarrollador Web junior con experiencia práctica en <strong>Angular</strong>,
+            <strong>PHP</strong> y <strong>MySQL</strong> adquirida durante mis prácticas en Becompliance.
+          </p>
+
+          <p class="about-paragraph">
+            Capaz de resolver incidencias en entornos reales y desarrollar funcionalidades
+            tanto en backend como en frontend. Motivado por seguir aprendiendo y aportar
+            valor en equipos de desarrollo.
+          </p>
+
+          <div class="about-info">
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>Madrid, España</span>
+            </div>
+            <div class="info-item">
+              <span>🇬🇧</span>
+              <span>Inglés B2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card card-frontend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <h3>Frontend</h3>
+            <p>Angular, TypeScript, HTML/CSS</p>
+          </div>
+
+          <div class="about-card card-backend">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <h3>Backend</h3>
+            <p>PHP, Laravel, Java</p>
+          </div>
+
+          <div class="about-card card-database">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+            <h3>Databases</h3>
+            <p>MySQL, cPanel</p>
+          </div>
+
+          <div class="about-card card-skills">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <h3>Aptitudes</h3>
+            <p>Trabajo en equipo, Persistente</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="section-content">
+      <h2 class="section-title">Experiencia</h2>
+
+      <div class="timeline-container">
+        <!-- Timeline line -->
+        <div class="timeline-line"></div>
+
+        <div class="experience-item">
+          <!-- Timeline dot -->
+          <div class="timeline-dot"></div>
+
+          <div class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-title">Desarrollador Web - Prácticas</h3>
+                <p class="experience-company">Becompliance</p>
+              </div>
+              <span class="experience-date">Marzo 2025 - Junio 2025</span>
+            </div>
+
+            <ul class="experience-list">
+              <li>
+                <span class="bullet">▹</span>
+                <span>Resolución de incidencias técnicas en plataforma de soporte</span>
+              </li>
+              <li>
+                <span class="bullet">▹</span>
+                <span>Uso de cPanel para operaciones sobre bases de datos MySQL</span>
+              </li>
+              <li>
+                <span class="bullet">▹</span>
+                <span>Desarrollo y mantenimiento de funcionalidades usando Angular (frontend) y PHP (backend)</span>
+              </li>
+              <li>
+                <span class="bullet">▹</span>
+                <span>Comunicación con el equipo técnico para validar soluciones</span>
+              </li>
+            </ul>
+
+            <div class="tech-tags">
+              <span class="tag tag-cyan">Angular</span>
+              <span class="tag tag-blue">PHP</span>
+              <span class="tag tag-purple">MySQL</span>
+              <span class="tag tag-pink">cPanel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="section-content">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category">
+          <h3 class="skill-category-title skill-frontend">Frontend</h3>
+          <div class="skill-bars">
+            <div *ngFor="let skill of skills.frontend; let i = index"
+                 class="skill-item"
+                 [style.animation-delay]="getAnimationDelay(i)">
+              <div class="skill-info">
+                <span>{{ skill }}</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar skill-bar-cyan"
+                     [style.width]="getSkillLevel(skill)"
+                     [style.animation-delay]="getAnimationDelay(i)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category">
+          <h3 class="skill-category-title skill-backend">Backend</h3>
+          <div class="skill-bars">
+            <div *ngFor="let skill of skills.backend; let i = index"
+                 class="skill-item"
+                 [style.animation-delay]="getAnimationDelay(i)">
+              <div class="skill-info">
+                <span>{{ skill }}</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar skill-bar-blue"
+                     [style.width]="getSkillLevel(skill)"
+                     [style.animation-delay]="getAnimationDelay(i)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category">
+          <h3 class="skill-category-title skill-database">Bases de Datos</h3>
+          <div class="skill-bars">
+            <div *ngFor="let skill of skills.databases; let i = index"
+                 class="skill-item"
+                 [style.animation-delay]="getAnimationDelay(i)">
+              <div class="skill-info">
+                <span>{{ skill }}</span>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-bar skill-bar-purple"
+                     [style.width]="getSkillLevel(skill)"
+                     [style.animation-delay]="getAnimationDelay(i)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category">
+          <h3 class="skill-category-title skill-tools">Herramientas & Sistemas</h3>
+          <div class="tools-container">
+            <span *ngFor="let tool of skills.tools; let i = index"
+                  class="tool-tag"
+                  [style.animation-delay]="getAnimationDelay(i)">
+              {{ tool }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="section-content">
+      <h2 class="section-title">Educación</h2>
+
+      <div class="education-grid">
+        <div class="education-card education-card-1">
+          <div class="education-content">
+            <div class="education-icon icon-cyan">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="education-info">
+              <h3 class="education-title">Grado Superior</h3>
+              <p class="education-degree">Desarrollo de Aplicaciones Web</p>
+              <p class="education-school">IES Palomeras</p>
+              <p class="education-date">2023 - 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-card education-card-2">
+          <div class="education-content">
+            <div class="education-icon icon-blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <div class="education-info">
+              <h3 class="education-title">Bachillerato</h3>
+              <p class="education-school">IES Villa de Vallecas</p>
+              <p class="education-date">2021 - 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-content">
+      <h2 class="section-title">Contacto</h2>
+
+      <div class="contact-container">
+        <div class="contact-card">
+          <p class="contact-text">
+            ¿Tienes un proyecto en mente o quieres colaborar?
+            <br />
+            <span class="contact-highlight">¡Hablemos!</span>
+          </p>
+
+          <div class="contact-buttons">
+            <a
+              href="mailto:danielcasadohorstmann@gmail.com"
+              class="contact-btn contact-btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              danielcasadohorstmann&#64;gmail.com
+            </a>
+
+            <div class="contact-links">
+              <a
+                href="https://linkedin.com/in/danielcasadohorstmann"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                LinkedIn
+              </a>
+
+              <a
+                href="tel:634555573"
+                class="contact-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                634 555 573
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Daniel Casado Horstmann. Desarrollado con Angular.</p>
+    </div>
+  </footer>
+</div>
